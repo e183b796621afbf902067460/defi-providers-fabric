@@ -24,5 +24,3 @@ ProviderAbstractFabric = ProviderAbstractFabric()
 ProviderAbstractFabric.addFabric(fabricType='http', fabric=HTTPProviderFabric)
 ProviderAbstractFabric.addFabric(fabricType='ipc', fabric=IPCProviderFabric)
 ProviderAbstractFabric.addFabric(fabricType='ws', fabric=WebsocketProviderFabric)
-
-print('something')
