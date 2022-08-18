@@ -3,8 +3,8 @@ from typing import Union
 from pathlib import Path
 from web3.providers.ipc import IPCProvider
 
-from interfaces.fabrics.interface import IConcreteFabric
-from orm.consts.chainName import ChainName
+from head.interfaces.fabrics.interface import IConcreteFabric
+from head.consts.chains.const import Chains
 
 
 class IPCProviderFabric(IConcreteFabric):
@@ -22,10 +22,10 @@ class IPCProviderFabric(IConcreteFabric):
 
 IPCProviderFabric = IPCProviderFabric()
 
-IPCProviderFabric.addProduct(chain=ChainName.ETH, path=os.getenv('ETH_IPC_PROVIDER', ''))
-IPCProviderFabric.addProduct(chain=ChainName.BSC, path=os.getenv('BSC_IPC_PROVIDER', ''))
-IPCProviderFabric.addProduct(chain=ChainName.AVAX, path=os.getenv('AVAX_IPC_PROVIDER', ''))
-IPCProviderFabric.addProduct(chain=ChainName.ARB, path=os.getenv('ARB_IPC_PROVIDER', ''))
-IPCProviderFabric.addProduct(chain=ChainName.FTM, path=os.getenv('FTM_IPC_PROVIDER', ''))
-IPCProviderFabric.addProduct(chain=ChainName.MATIC, path=os.getenv('MATIC_IPC_PROVIDER', ''))
-IPCProviderFabric.addProduct(chain=ChainName.OPT, path=os.getenv('OPT_IPC_PROVIDER', ''))
+IPCProviderFabric.addProduct(chain=Chains.ETH, path=os.getenv('ETH_IPC_PROVIDER', ''))
+IPCProviderFabric.addProduct(chain=Chains.BSC, path=os.getenv('BSC_IPC_PROVIDER', ''))
+IPCProviderFabric.addProduct(chain=Chains.AVAX, path=os.getenv('AVAX_IPC_PROVIDER', ''))
+IPCProviderFabric.addProduct(chain=Chains.ARB, path=os.getenv('ARB_IPC_PROVIDER', ''))
+IPCProviderFabric.addProduct(chain=Chains.FTM, path=os.getenv('FTM_IPC_PROVIDER', ''))
+IPCProviderFabric.addProduct(chain=Chains.MATIC, path=os.getenv('MATIC_IPC_PROVIDER', ''))
+IPCProviderFabric.addProduct(chain=Chains.OPT, path=os.getenv('OPT_IPC_PROVIDER', ''))

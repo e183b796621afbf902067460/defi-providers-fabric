@@ -1,5 +1,5 @@
-from interfaces.abstracts.interface import IAbstractFabric
-from interfaces.fabrics.interface import IConcreteFabric
+from head.interfaces.abstracts.interface import IAbstractFabric
+from head.interfaces.fabrics.interface import IConcreteFabric
 
 from providers.fabrics.http.fabric import HTTPProviderFabric
 from providers.fabrics.ipc.fabric import IPCProviderFabric
