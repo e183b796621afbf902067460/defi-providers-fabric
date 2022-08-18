@@ -7,11 +7,11 @@ from orm.consts.chainName import ChainName
 
 class HTTPProviderFabric(IConcreteFabric):
 
-    def addProduct(self, chain: str = None, uri: str = None) -> None:
+    def addProduct(self, chain: str, uri: str) -> None:
         if not self._products.get(chain):
             self._products[chain]: HTTPProvider = HTTPProvider(endpoint_uri=uri)
 
-    def getProduct(self, chain: str = None) -> HTTPProvider:
+    def getProduct(self, chain: str) -> HTTPProvider:
         provider: HTTPProvider = self._products.get(chain)
         if not provider:
             raise ValueError(f'Set HTTP provider for {chain} blockchain')

@@ -9,11 +9,11 @@ from orm.consts.chainName import ChainName
 
 class IPCProviderFabric(IConcreteFabric):
 
-    def addProduct(self, chain: str = None, path: Union[str, Path] = None) -> None:
+    def addProduct(self, chain: str, path: Union[str, Path]) -> None:
         if not self._products.get(chain):
             self._products[chain]: IPCProvider = IPCProvider(ipc_path=path)
 
-    def getProduct(self, chain: str = None) -> IPCProvider:
+    def getProduct(self, chain: str) -> IPCProvider:
         provider: IPCProvider = self._products.get(chain)
         if not provider:
             raise ValueError(f'Set IPC provider for {chain} blockchain')

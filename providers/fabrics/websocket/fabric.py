@@ -7,11 +7,11 @@ from orm.consts.chainName import ChainName
 
 class WebsocketProviderFabric(IConcreteFabric):
 
-    def addProduct(self, chain: str = None, uri: str = None) -> None:
+    def addProduct(self, chain: str, uri: str) -> None:
         if not self._products.get(chain):
             self._products[chain]: WebsocketProvider = WebsocketProvider(endpoint_uri=uri)
 
-    def getProduct(self, chain: str = None) -> WebsocketProvider:
+    def getProduct(self, chain: str) -> WebsocketProvider:
         provider: WebsocketProvider = self._products.get(chain)
         if not provider:
             raise ValueError(f'Set Websocket provider for {chain} blockchain')

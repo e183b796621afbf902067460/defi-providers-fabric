@@ -8,11 +8,11 @@ from providers.fabrics.websocket.fabric import WebsocketProviderFabric
 
 class ProviderAbstractFabric(IAbstractFabric):
 
-    def addFabric(self, fabricType: str = None, fabric: IConcreteFabric = None) -> None:
+    def addFabric(self, fabricType: str, fabric: IConcreteFabric) -> None:
         if not self._fabrics.get(fabricType):
             self._fabrics[fabricType]: IConcreteFabric = fabric
 
-    def getFabric(self, fabricType: str = None) -> IConcreteFabric:
+    def getFabric(self, fabricType: str) -> IConcreteFabric:
         fabric: IConcreteFabric = self._fabrics.get(fabricType)
         if not fabric:
             raise ValueError(f'Set Fabric for {fabricType} fabric type')
