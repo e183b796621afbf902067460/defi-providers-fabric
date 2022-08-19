@@ -1,9 +1,9 @@
 from head.interfaces.abstracts.interface import IAbstractFabric
 from head.interfaces.fabrics.interface import IConcreteFabric
 
-from providers.fabrics.http.fabric import HTTPProviderFabric
-from providers.fabrics.ipc.fabric import IPCProviderFabric
-from providers.fabrics.websocket.fabric import WebsocketProviderFabric
+from providers.fabrics.http.fabric import httpProviderFabric
+from providers.fabrics.ipc.fabric import ipcProviderFabric
+from providers.fabrics.websocket.fabric import wsProviderFabric
 
 
 class ProviderAbstractFabric(IAbstractFabric):
@@ -19,8 +19,8 @@ class ProviderAbstractFabric(IAbstractFabric):
         return fabric
 
 
-ProviderAbstractFabric = ProviderAbstractFabric()
+providerAbstractFabric = ProviderAbstractFabric()
 
-ProviderAbstractFabric.addFabric(fabricType='http', fabric=HTTPProviderFabric)
-ProviderAbstractFabric.addFabric(fabricType='ipc', fabric=IPCProviderFabric)
-ProviderAbstractFabric.addFabric(fabricType='ws', fabric=WebsocketProviderFabric)
+providerAbstractFabric.addFabric(fabricType='http', fabric=httpProviderFabric)
+providerAbstractFabric.addFabric(fabricType='ipc', fabric=ipcProviderFabric)
+providerAbstractFabric.addFabric(fabricType='ws', fabric=wsProviderFabric)

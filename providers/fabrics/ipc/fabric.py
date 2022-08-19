@@ -20,7 +20,7 @@ class IPCProviderFabric(IConcreteFabric):
         return provider
 
 
-IPCProviderFabric = IPCProviderFabric()
+ipcProviderFabric = IPCProviderFabric()
 
 IPCProviderFabric.addProduct(chain=Chains.ETH, path=os.getenv('ETH_IPC_PROVIDER', ''))
 IPCProviderFabric.addProduct(chain=Chains.BSC, path=os.getenv('BSC_IPC_PROVIDER', ''))
