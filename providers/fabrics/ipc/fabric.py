@@ -22,10 +22,10 @@ class IPCProviderFabric(IConcreteFabric):
 
 ipcProviderFabric = IPCProviderFabric()
 
-IPCProviderFabric.addProduct(chain=Chains.ETH, path=os.getenv('ETH_IPC_PROVIDER', ''))
-IPCProviderFabric.addProduct(chain=Chains.BSC, path=os.getenv('BSC_IPC_PROVIDER', ''))
-IPCProviderFabric.addProduct(chain=Chains.AVAX, path=os.getenv('AVAX_IPC_PROVIDER', ''))
-IPCProviderFabric.addProduct(chain=Chains.ARB, path=os.getenv('ARB_IPC_PROVIDER', ''))
-IPCProviderFabric.addProduct(chain=Chains.FTM, path=os.getenv('FTM_IPC_PROVIDER', ''))
-IPCProviderFabric.addProduct(chain=Chains.MATIC, path=os.getenv('MATIC_IPC_PROVIDER', ''))
-IPCProviderFabric.addProduct(chain=Chains.OPT, path=os.getenv('OPT_IPC_PROVIDER', ''))
+ipcProviderFabric.addProduct(chain=Chains.ETH, path=os.getenv('ETH_IPC_PROVIDER', ''))
+ipcProviderFabric.addProduct(chain=Chains.BSC, path=os.getenv('BSC_IPC_PROVIDER', ''))
+ipcProviderFabric.addProduct(chain=Chains.AVAX, path=os.getenv('AVAX_IPC_PROVIDER', ''))
+ipcProviderFabric.addProduct(chain=Chains.ARB, path=os.getenv('ARB_IPC_PROVIDER', ''))
+ipcProviderFabric.addProduct(chain=Chains.FTM, path=os.getenv('FTM_IPC_PROVIDER', ''))
+ipcProviderFabric.addProduct(chain=Chains.MATIC, path=os.getenv('MATIC_IPC_PROVIDER', ''))
+ipcProviderFabric.addProduct(chain=Chains.OPT, path=os.getenv('OPT_IPC_PROVIDER', ''))
