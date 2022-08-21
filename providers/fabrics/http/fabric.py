@@ -20,7 +20,7 @@ class HTTPProviderFabric(IConcreteFabric):
 
 httpProviderFabric = HTTPProviderFabric()
 
-httpProviderFabric.addProduct(chain=Chains.ETH, uri=os.getenv('ETH_HTTP_PROVIDER', 'https://mainnet.infura.io/v3/3c9943304cf64593a4013a87cc5fd3f5'))
+httpProviderFabric.addProduct(chain=Chains.ETH, uri=os.getenv('ETH_HTTP_PROVIDER', ''))
 httpProviderFabric.addProduct(chain=Chains.BSC, uri=os.getenv('BSC_HTTP_PROVIDER', ''))
 httpProviderFabric.addProduct(chain=Chains.AVAX, uri=os.getenv('AVAX_HTTP_PROVIDER', ''))
 httpProviderFabric.addProduct(chain=Chains.ARB, uri=os.getenv('ARB_HTTP_PROVIDER', ''))
