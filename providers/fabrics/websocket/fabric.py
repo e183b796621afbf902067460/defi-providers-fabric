@@ -2,7 +2,6 @@ import os
 from web3.providers.websocket import WebsocketProvider
 
 from head.interfaces.fabrics.interface import IConcreteFabric
-from head.consts.chains.const import Chains
 
 
 class WebsocketProviderFabric(IConcreteFabric):
@@ -20,10 +19,10 @@ class WebsocketProviderFabric(IConcreteFabric):
 
 wsProviderFabric = WebsocketProviderFabric()
 
-wsProviderFabric.addProduct(chain=Chains.ETH, uri=os.getenv('ETH_WS_PROVIDER', ''))
-wsProviderFabric.addProduct(chain=Chains.BSC, uri=os.getenv('BSC_WS_PROVIDER', ''))
-wsProviderFabric.addProduct(chain=Chains.AVAX, uri=os.getenv('AVAX_WS_PROVIDER', ''))
-wsProviderFabric.addProduct(chain=Chains.ARB, uri=os.getenv('ARB_WS_PROVIDER', ''))
-wsProviderFabric.addProduct(chain=Chains.FTM, uri=os.getenv('FTM_WS_PROVIDER', ''))
-wsProviderFabric.addProduct(chain=Chains.MATIC, uri=os.getenv('MATIC_WS_PROVIDER', ''))
-wsProviderFabric.addProduct(chain=Chains.OPT, uri=os.getenv('OPT_WS_PROVIDER', ''))
+wsProviderFabric.addProduct(chain='eth', uri=os.getenv('ETH_WS_PROVIDER', ''))
+wsProviderFabric.addProduct(chain='bsc', uri=os.getenv('BSC_WS_PROVIDER', ''))
+wsProviderFabric.addProduct(chain='avax', uri=os.getenv('AVAX_WS_PROVIDER', ''))
+wsProviderFabric.addProduct(chain='arb', uri=os.getenv('ARB_WS_PROVIDER', ''))
+wsProviderFabric.addProduct(chain='ftm', uri=os.getenv('FTM_WS_PROVIDER', ''))
+wsProviderFabric.addProduct(chain='matic', uri=os.getenv('MATIC_WS_PROVIDER', ''))
+wsProviderFabric.addProduct(chain='opt', uri=os.getenv('OPT_WS_PROVIDER', ''))
