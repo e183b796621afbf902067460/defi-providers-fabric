@@ -1,4 +1,8 @@
 # DeFi Providers Fabric
+
+Depends on: [defi-head-core](https://github.com/e183b796621afbf902067460/defi-head-core).
+
+---
 Based on input arguments an `Abstract Fabric` return `Concrete Fabric` object such as: *HTTP Provider Fabric*, *IPC Provider Fabric* and *WebSocket Provider Fabric*.
 `Concrete Fabric` (HTTP, IPC, WebSocket) can produce needed `Provider Object` for different Blockchains.
 
@@ -18,4 +22,4 @@ provider = BridgeConfigurator(
             .produceProduct()
 ```
 
-All fabrics and products keys can be viewed in the right factories
+All fabrics and products keys can be viewed in the right factories.
