@@ -19,10 +19,10 @@ class HTTPProviderFabric(IConcreteFabric):
 
 httpProviderFabric = HTTPProviderFabric()
 
-httpProviderFabric.addProduct(chain='eth', uri=os.getenv('ETH_HTTP_PROVIDER', ''))
-httpProviderFabric.addProduct(chain='bsc', uri=os.getenv('BSC_HTTP_PROVIDER', ''))
-httpProviderFabric.addProduct(chain='avax', uri=os.getenv('AVAX_HTTP_PROVIDER', ''))
-httpProviderFabric.addProduct(chain='arb', uri=os.getenv('ARB_HTTP_PROVIDER', ''))
-httpProviderFabric.addProduct(chain='ftm', uri=os.getenv('FTM_HTTP_PROVIDER', ''))
-httpProviderFabric.addProduct(chain='matic', uri=os.getenv('MATIC_HTTP_PROVIDER', ''))
-httpProviderFabric.addProduct(chain='opt', uri=os.getenv('OPT_HTTP_PROVIDER', ''))
+httpProviderFabric.addProduct(chain='eth', uri=os.getenv('ETH_HTTP_PROVIDER', 'https://rpc.ankr.com/eth'))
+httpProviderFabric.addProduct(chain='bsc', uri=os.getenv('BSC_HTTP_PROVIDER', 'https://rpc.ankr.com/bsc'))
+httpProviderFabric.addProduct(chain='avax', uri=os.getenv('AVAX_HTTP_PROVIDER', 'https://rpc.ankr.com/avalanche'))
+httpProviderFabric.addProduct(chain='arb', uri=os.getenv('ARB_HTTP_PROVIDER', 'https://rpc.ankr.com/arbitrum'))
+httpProviderFabric.addProduct(chain='ftm', uri=os.getenv('FTM_HTTP_PROVIDER', 'https://rpc.ankr.com/fantom'))
+httpProviderFabric.addProduct(chain='matic', uri=os.getenv('MATIC_HTTP_PROVIDER', 'https://rpc.ankr.com/polygon'))
+httpProviderFabric.addProduct(chain='opt', uri=os.getenv('OPT_HTTP_PROVIDER', 'https://rpc.ankr.com/optimism'))
