@@ -11,7 +11,7 @@ To provide needed configuration just need to set environment variables for neede
 
 # Usage
 For example, to get `BSC_HTTP_PROVIDER` need to call [`BridgeConfigurator`](https://github.com/e183b796621afbf902067460/defi-head-core/blob/master/head/bridge/configurator.py) and pass to it constructor next arguments and then call `produceProduct()` method:
-```
+```python
 from head.bridge.configurator import BridgeConfigurator
 from providers.abstracts.fabric import providerAbstractFabric
 
